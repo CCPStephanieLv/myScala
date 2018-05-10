@@ -15,7 +15,6 @@ object Solution {
 
             for(ic <- 0 until n) {
                 //rowArray(ir)(ic)=lineArray(ic)
-
                 if(ir == ic){
                     leftD = leftD + lineArray(ic)
                 }
