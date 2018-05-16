@@ -18,7 +18,6 @@ object Solution {
     }
 
    
-
     def main(args: Array[String]) {
         var x = scala.io.StdIn.readInt()
         var intSet =scala.io.StdIn.readLine().split(" ").map(_.trim.toInt).take(x)
