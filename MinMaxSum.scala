@@ -1,10 +1,10 @@
 object Solution {
-    def static(arrs: Array[Int]) {
+    def static(arrs: Array[BigInt]) {
         
-        var totalList = new Array[Int](5)
+        var totalList = new Array[BigInt](5)
 
         for (i <- 0 until arrs.size ) {
-            var total: Int=0
+            var total: BigInt=0
 
             for (j <- 0 until arrs.size) {
                 (j-i) compare 0 match {               
@@ -21,7 +21,7 @@ object Solution {
 
     def main(args: Array[String]) {
         var n: Int=5
-        var numList: Array[Int] = scala.io.StdIn.readLine().split(" ").map(_.trim.toInt).take(n)
+        var numList: Array[BigInt] = scala.io.StdIn.readLine().split(" ").map(BigInt(_)).take(n)
         static(numList)
     }
 }
