@@ -42,11 +42,16 @@ object Solution {
     def maximizingXor(l: Int, r: Int): Int= {
         var n: Int=((r-l+1)*(r-l+1)+(r-l+1))/2
         var results = new Array[Int](n)
+        var result: Int=0
 
         for(a <- l until r+1) {
             for(b <- a until r+1) {
                 if(a != b) {
-                    results = results :+ (a ^ b)
+                    result = (a ^ b)
+                    if (!results.contains(result)) {
+                        results = results :+ result
+                    }
+                    
                     //println(a.toString + ";  "+ b.toString + "; total:;  " + (a+b).toString+"; result:; " + (a ^ b).toString)
                 }
             }
